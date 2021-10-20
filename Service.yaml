@@ -3,26 +3,13 @@ kind: Service
 metadata:
   name: my-service-kubernetes
 spec:
+  type: NodePort
   selector:
     app: kubernetes-start
-    ports:
+  ports:
       # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
     - port: 80
       targetPort: 8080
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-      nodePort: 30005
-
-      
-#   ports:
-#     - protocol: TCP
-#       port: 80
-#       targetPort: 8080
-#   externalIPs:
-#     - 192.168.55.1
-#   clusterIP: 10.96.0.5
-#   type: LoadBalancer
-# status:
-#   loadBalancer:
-#     ingress:
-#     - ip: 192.168.55.1
+      nodePort: 30007
