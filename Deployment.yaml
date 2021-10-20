@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: kubernetes-example
-  name: app
+  name: kubernetes-start
 spec:
   replicas: 5
   selector:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - image: acalderon88/kube-training:1.0.0
-        name: app
+        name: kubernetes-start
         ports:
         - containerPort: 8080
