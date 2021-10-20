@@ -10,7 +10,7 @@ spec:
       port: 80
       targetPort: 8080
   externalIPs:
-    - 192.168.55.5
+    - 192.168.55.1
   clusterIP: 10.96.0.5
   type: LoadBalancer
 status:
