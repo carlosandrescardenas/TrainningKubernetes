@@ -6,6 +6,9 @@ spec:
   selector:
     app: kubernetes-start
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 5555
       targetPort: 8080
+  externalIPs:
+    - 80.11.12.10
