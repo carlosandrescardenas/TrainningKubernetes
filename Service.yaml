@@ -6,9 +6,12 @@ spec:
   selector:
     app: kubernetes-start
   ports:
-    - name: http
-      protocol: TCP
-      port: 5555
+    - protocol: TCP
+      port: 80
       targetPort: 8080
-  externalIPs:
-    - 80.11.12.10
+  clusterIP: 10.0.171.239
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.0.2.127
